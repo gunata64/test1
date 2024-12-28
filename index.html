@@ -57,6 +57,31 @@
     </div>
 
     <!-- Скрипт для отправки формы -->
-    <script src="script.js"></script>
+    <script src="script.js">function sendMessage() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+    
+        if (name && email && message) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "send_message.php");
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    alert("Сообщение отправлено!");
+                } else {
+                    alert("Ошибка отправки сообщения!");
+                }
+            };
+    
+            xhr.send("name=" + name + "&email=" + email + "&message=" + message);
+        } else {
+            alert("Заполните все поля!");
+        }
+    }
+    
+    document.querySelector("form").addEventListener("submit", sendMessage);
+    </script>
   </body>
 </html>
