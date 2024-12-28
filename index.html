@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ru">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>Портфолио веб-мастера</title>
+    <!-- Стили CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Портфолио веб-мастера на WordPress</h1>
+      </header>
+
+      <main>
+        <!-- Контактная форма -->
+        <section>
+          <form action="send_message.php" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message"></textarea><br>
+
+            <button type="submit">Отправить заявку</button>
+          </form>
+        </section>
+
+        <!-- Кейсы -->
+        <article>
+          <h2>Кейс 1: Разработка корпоративного сайта</h2>
+          <p>Описание кейса...</p>
+        </article>
+
+        <article>
+          <h2>Кейс 2: Создание интернет-магазина</h2>
+          <p>Описание кейса...</p>
+        </article>
+
+        <article>
+          <h2>Кейс 3: Редизайн существующего сайта</h2>
+          <p>Описание кейса...</p>
+        </article>
+      </main>
+
+      <!-- Цены -->
+      <aside>
+        <ul>
+          <li>Разработка сайта: от 50 000 руб.</li>
+          <li>Создание интернет-магазина: от 70 000 руб.</li>
+          <li>Редизайн сайта: от 30 000 руб.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Скрипт для отправки формы -->
+    <script src="script.js"></script>
+  </body>
 </html>
